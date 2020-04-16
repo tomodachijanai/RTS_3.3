@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">RTS_genalg</string>
+    <string name="btn_caption">TRAIN</string>
+    <string name="tvresult">result</string>
+    <string name="tvx1">X1</string>
+    <string name="tvx2">X2</string>
+    <string name="tvx3">X3</string>
+    <string name="tvx4">X4</string>
+    <string name="et_a_hint">Enter A</string>
+    <string name="et_b_hint">Enter B</string>
+    <string name="et_c_hint">Enter C</string>
+    <string name="et_d_hint">Enter D</string>
+    <string name="et_y_hint">Enter Y</string>
+    <string name="res_success">SUCCESS</string>
+    <string name="res_failure">REACHED MAXIMUM OF ITERATIONS</string>
+</resources>

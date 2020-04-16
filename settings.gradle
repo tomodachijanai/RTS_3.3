@@ -1,0 +1,2 @@
+rootProject.name='RTS_genalg'
+include ':app'
