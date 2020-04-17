@@ -8,7 +8,7 @@ import java.util.Random;
 public class GenAlgNetwork {
     private static final int POPULATION_SIZE = 1024;
     private static final int MAX_ITER = Integer.MAX_VALUE;
-    private static final int MUTATION_CHANCE = 20;
+    private static final int MUTATION_CHANCE = 10;
     private static final double ELIT_RATE = 0.1;
 
     protected long iter;
@@ -16,7 +16,7 @@ public class GenAlgNetwork {
     private int A, B, C, D, Y;
     private ArrayList<Individual> population = new ArrayList<>();
 
-    public boolean Train(int a, int b, int c, int d, int y) {
+    public boolean Train(int a, int b, int c, int d, int y, int mutation_growth) {
         Random random = new Random(System.currentTimeMillis());
 
         A = a;
@@ -94,21 +94,21 @@ public class GenAlgNetwork {
                             break;
                     }
                     // mutation
-                    if (random.nextInt(100) <= MUTATION_CHANCE)
+                    if (random.nextInt(100) <= MUTATION_CHANCE + mutation_growth)
                         population.get(i).X1 = random.nextInt(Y / 2);
-                    if (random.nextInt(100) <= MUTATION_CHANCE)
+                    if (random.nextInt(100) <= MUTATION_CHANCE + mutation_growth)
                         population.get(i).X2 = random.nextInt(Y / 2);
-                    if (random.nextInt(100) <= MUTATION_CHANCE)
+                    if (random.nextInt(100) <= MUTATION_CHANCE + mutation_growth)
                         population.get(i).X3 = random.nextInt(Y / 2);
-                    if (random.nextInt(100) <= MUTATION_CHANCE)
+                    if (random.nextInt(100) <= MUTATION_CHANCE + mutation_growth)
                         population.get(i).X4 = random.nextInt(Y / 2);
-                    if (random.nextInt(100) <= MUTATION_CHANCE)
+                    if (random.nextInt(100) <= MUTATION_CHANCE + mutation_growth)
                         population.get(i+1).X1 = random.nextInt(Y / 2);
-                    if (random.nextInt(100) <= MUTATION_CHANCE)
+                    if (random.nextInt(100) <= MUTATION_CHANCE + mutation_growth)
                         population.get(i+1).X2 = random.nextInt(Y / 2);
-                    if (random.nextInt(100) <= MUTATION_CHANCE)
+                    if (random.nextInt(100) <= MUTATION_CHANCE + mutation_growth)
                         population.get(i+1).X3 = random.nextInt(Y / 2);
-                    if (random.nextInt(100) <= MUTATION_CHANCE)
+                    if (random.nextInt(100) <= MUTATION_CHANCE + mutation_growth)
                         population.get(i+1).X4 = random.nextInt(Y / 2);
                 }
             }
